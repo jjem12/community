@@ -20,15 +20,18 @@
     <!-- Favicon icon -->
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <!-- Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
     <!-- Required Fremwork -->
     <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- radial chart.css -->
+    <link rel="stylesheet" href="/assets/pages/chart/radial/css/radial.css" type="text/css" media="all">
     <!-- feather Awesome -->
     <link rel="stylesheet" type="text/css" href="/assets/icon/feather/css/feather.css">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/assets/css/jquery.mCustomScrollbar.css">
 </head>
+<!-- Menu sidebar static layout -->
 
 <body>
     <!-- Pre-loader start -->
@@ -80,7 +83,7 @@
                         <a class="mobile-menu" id="mobile-collapse" href="#!">
                             <i class="feather icon-menu"></i>
                         </a>
-                        <a href="index.html">
+                        <a href="index">
                             <img class="img-fluid" src="/assets/images/logo.png" alt="Theme-Logo" />
                         </a>
                         <a class="mobile-options">
@@ -240,7 +243,7 @@
                             </div>
                             <div class="main-friend-list">
                                 <div class="media userlist-box" data-id="1" data-status="online"
-                                    data-username="Josephin Doe" data-bs-toggle="tooltip" data-bs-placement="left"
+                                    data-username="Josephin Doe" data-bs-toggle="tooltip" data-placement="left"
                                     title="Josephin Doe">
                                     <a class="media-left" href="#!">
                                         <img class="media-object img-radius img-radius"
@@ -252,7 +255,7 @@
                                     </div>
                                 </div>
                                 <div class="media userlist-box" data-id="2" data-status="online"
-                                    data-username="Lary Doe" data-bs-toggle="tooltip" data-bs-placement="left"
+                                    data-username="Lary Doe" data-bs-toggle="tooltip" data-placement="left"
                                     title="Lary Doe">
                                     <a class="media-left" href="#!">
                                         <img class="media-object img-radius" src="/assets/images/avatar-2.jpg"
@@ -264,7 +267,7 @@
                                     </div>
                                 </div>
                                 <div class="media userlist-box" data-id="3" data-status="online" data-username="Alice"
-                                    data-bs-toggle="tooltip" data-bs-placement="left" title="Alice">
+                                    data-bs-toggle="tooltip" data-placement="left" title="Alice">
                                     <a class="media-left" href="#!">
                                         <img class="media-object img-radius" src="/assets/images/avatar-4.jpg"
                                             alt="Generic placeholder image">
@@ -275,7 +278,7 @@
                                     </div>
                                 </div>
                                 <div class="media userlist-box" data-id="4" data-status="online" data-username="Alia"
-                                    data-bs-toggle="tooltip" data-bs-placement="left" title="Alia">
+                                    data-bs-toggle="tooltip" data-placement="left" title="Alia">
                                     <a class="media-left" href="#!">
                                         <img class="media-object img-radius" src="/assets/images/avatar-3.jpg"
                                             alt="Generic placeholder image">
@@ -286,7 +289,7 @@
                                     </div>
                                 </div>
                                 <div class="media userlist-box" data-id="5" data-status="online" data-username="Suzen"
-                                    data-bs-toggle="tooltip" data-bs-placement="left" title="Suzen">
+                                    data-bs-toggle="tooltip" data-placement="left" title="Suzen">
                                     <a class="media-left" href="#!">
                                         <img class="media-object img-radius" src="/assets/images/avatar-2.jpg"
                                             alt="Generic placeholder image">
@@ -360,17 +363,17 @@
                                         <span class="pcoded-mtext">Dashboard</span>
                                     </a>
                                     <ul class="pcoded-submenu">
-                                        <li class="active">
-                                            <a href="index.html">
+                                        <li class="">
+                                            <a href="index">
                                                 <span class="pcoded-mtext">Default</span>
                                             </a>
                                         </li>
-                                        <li class="">
-                                            <a href="dashboard-crm.html">
+                                        <li class="active">
+                                            <a href="dashboard-crm">
                                                 <span class="pcoded-mtext">CRM</span>
                                             </a>
                                         </li>
-                                        <li class=" ">
+                                        <li class="">
                                             <a href="dashboard-analytics.html">
                                                 <span class="pcoded-mtext">Analytics</span>
                                                 <span class="pcoded-badge label label-info ">NEW</span>
@@ -480,7 +483,7 @@
                                                 <span class="pcoded-mtext">Data</span>
                                             </a>
                                         </li>
-                                        <li class=" ">
+                                        <li class="">
                                             <a href="widget-chart.html">
                                                 <span class="pcoded-mtext">Chart Widget</span>
                                             </a>
@@ -1739,289 +1742,374 @@
                         <div class="pcoded-inner-content">
                             <div class="main-body">
                                 <div class="page-wrapper">
-
                                     <div class="page-body">
                                         <div class="row">
-                                            <!-- task, page, download counter  start -->
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-yellow update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 class="text-white">$30200</h4>
-                                                                <h6 class="text-white m-b-0">All Earnings</h6>
-                                                            </div>
-                                                            <div class="col-4 text-end">
-                                                                <canvas id="update-chart-1" height="50"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i>update
-                                                            : 2:15 am</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-green update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 class="text-white">290+</h4>
-                                                                <h6 class="text-white m-b-0">Page Views</h6>
-                                                            </div>
-                                                            <div class="col-4 text-end">
-                                                                <canvas id="update-chart-2" height="50"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i>update
-                                                            : 2:15 am</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-pink update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 class="text-white">145</h4>
-                                                                <h6 class="text-white m-b-0">Task Completed</h6>
-                                                            </div>
-                                                            <div class="col-4 text-end">
-                                                                <canvas id="update-chart-3" height="50"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i>update
-                                                            : 2:15 am</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-md-6">
-                                                <div class="card bg-c-lite-green update-card">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-end">
-                                                            <div class="col-8">
-                                                                <h4 class="text-white">500</h4>
-                                                                <h6 class="text-white m-b-0">Downloads</h6>
-                                                            </div>
-                                                            <div class="col-4 text-end">
-                                                                <canvas id="update-chart-4" height="50"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <p class="text-white m-b-0"><i
-                                                                class="feather icon-clock text-white f-14 m-r-10"></i>update
-                                                            : 2:15 am</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- task, page, download counter  end -->
 
-                                            <!--  sale analytics start -->
-                                            <div class="col-xl-9 col-md-12">
+                                            <!-- statustic-card start -->
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-yellow text-white">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col">
+                                                                <p class="m-b-5">New Customer</p>
+                                                                <h4 class="m-b-0">852</h4>
+                                                            </div>
+                                                            <div class="col col-auto text-end">
+                                                                <i class="feather icon-user f-50 text-c-yellow"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-green text-white">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col">
+                                                                <p class="m-b-5">Income</p>
+                                                                <h4 class="m-b-0">$5,852</h4>
+                                                            </div>
+                                                            <div class="col col-auto text-end">
+                                                                <i
+                                                                    class="feather icon-credit-card f-50 text-c-green"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-pink text-white">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col">
+                                                                <p class="m-b-5">Ticket</p>
+                                                                <h4 class="m-b-0">42</h4>
+                                                            </div>
+                                                            <div class="col col-auto text-end">
+                                                                <i class="feather icon-book f-50 text-c-pink"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card bg-c-blue text-white">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col">
+                                                                <p class="m-b-5">Orders</p>
+                                                                <h4 class="m-b-0">$5,242</h4>
+                                                            </div>
+                                                            <div class="col col-auto text-end">
+                                                                <i
+                                                                    class="feather icon-shopping-cart f-50 text-c-blue"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- statustic-card start -->
+
+                                            <!-- statustic-card start -->
+                                            <div class="col-xl-8 col-md-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Sales Analytics</h5>
-                                                        <span class="text-muted">For more details about usage, please
-                                                            refer <a href="https://www.amcharts.com/online-store/"
-                                                                target="_blank">amCharts</a> licences.</span>
+                                                        <div class="card-header-left ">
+                                                            <h5>Monthly View</h5>
+                                                            <span class="text-muted">For more details about usage,
+                                                                please refer <a
+                                                                    href="https://www.amcharts.com/online-store/"
+                                                                    target="_blank">amCharts</a> licences.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block-big">
+                                                        <div id="monthly-graph" style="height:250px"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-12">
+                                                <div class="card feed-card">
+                                                    <div class="card-header">
+                                                        <h5>Feeds</h5>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i
+                                                                    class="feather icon-bell bg-simple-c-blue feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">You have 3 pending tasks. <span
+                                                                        class="text-muted f-right f-13">Just Now</span>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i
+                                                                    class="feather icon-shopping-cart bg-simple-c-pink feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">New order received <span
+                                                                        class="text-muted f-right f-13">Just Now</span>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i
+                                                                    class="feather icon-file-text bg-simple-c-green feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">You have 3 pending tasks. <span
+                                                                        class="text-muted f-right f-13">Just Now</span>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i
+                                                                    class="feather icon-shopping-cart bg-simple-c-pink feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">New order received <span
+                                                                        class="text-muted f-right f-13">Just Now</span>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-30">
+                                                            <div class="col-auto p-r-0">
+                                                                <i
+                                                                    class="feather icon-file-text bg-simple-c-green feed-icon"></i>
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">You have 3 pending tasks. <span
+                                                                        class="text-muted f-right f-13">Just Now</span>
+                                                                </h6>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- statustic-card start -->
+
+                                            <!-- income start -->
+                                            <div class="col-xl-4 col-md-6">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Total Leads</h5>
                                                         <div class="card-header-right">
                                                             <ul class="list-unstyled card-option">
-                                                                <li><i class="feather icon-maximize full-card"></i></li>
-                                                                <li><i class="feather icon-minus minimize-card"></i>
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i>
                                                                 </li>
-                                                                <li><i class="feather icon-trash-2 close-card"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="card-block">
-                                                        <div id="sales-analytics" style="height: 265px;"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-3 col-md-12">
-                                                <div class="card user-card2">
-                                                    <div class="card-block text-center">
-                                                        <h6 class="m-b-15">Project Risk</h6>
-                                                        <div class="risk-rate">
-                                                            <span><b>5</b></span>
-                                                        </div>
-                                                        <h6 class="m-b-10 m-t-10">Balanced</h6>
-                                                        <a href="#!" class="text-c-yellow b-b-warning">Change Your
-                                                            Risk</a>
-                                                        <div
-                                                            class="row justify-content-center m-t-10 b-t-default m-l-0 m-r-0">
-                                                            <div class="col m-t-15 b-r-default">
-                                                                <h6 class="text-muted">Nr</h6>
-                                                                <h6>AWS 2455</h6>
+                                                        <p class="text-c-green f-w-500"><i
+                                                                class="feather icon-chevrons-up m-r-5"></i> 18% High
+                                                            than last month</p>
+                                                        <div class="row">
+                                                            <div class="col-4 b-r-default">
+                                                                <p class="text-muted m-b-5">Overall</p>
+                                                                <h5>76.12%</h5>
                                                             </div>
-                                                            <div class="col m-t-15">
-                                                                <h6 class="text-muted">Created</h6>
-                                                                <h6>30th Sep</h6>
+                                                            <div class="col-4 b-r-default">
+                                                                <p class="text-muted m-b-5">Monthly</p>
+                                                                <h5>16.40%</h5>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <p class="text-muted m-b-5">Day</p>
+                                                                <h5>4.56%</h5>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="d-grid">
-                                                        <button class="btn btn-warning p-t-15 p-b-15">
-                                                            Download Overall Report
-                                                        </button>
-                                                    </div>
+                                                    <canvas id="tot-lead" height="150"></canvas>
                                                 </div>
                                             </div>
-                                            <!--  sale analytics end -->
-
-                                            <div class="col-xl-8 col-md-12">
-                                                <div class="card table-card">
+                                            <div class="col-xl-4 col-md-6">
+                                                <div class="card">
                                                     <div class="card-header">
-                                                        <h5>Application Sales</h5>
+                                                        <h5>Total Vendors</h5>
                                                         <div class="card-header-right">
                                                             <ul class="list-unstyled card-option">
-                                                                <li><i class="feather icon-maximize full-card"></i></li>
-                                                                <li><i class="feather icon-minus minimize-card"></i>
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i>
                                                                 </li>
-                                                                <li><i class="feather icon-trash-2 close-card"></i></li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <p class="text-c-pink f-w-500"><i
+                                                                class="feather icon-chevrons-down m-r-15"></i> 24% High
+                                                            than last month</p>
+                                                        <div class="row">
+                                                            <div class="col-4 b-r-default">
+                                                                <p class="text-muted m-b-5">Overall</p>
+                                                                <h5>68.52%</h5>
+                                                            </div>
+                                                            <div class="col-4 b-r-default">
+                                                                <p class="text-muted m-b-5">Monthly</p>
+                                                                <h5>28.90%</h5>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <p class="text-muted m-b-5">Day</p>
+                                                                <h5>13.50%</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <canvas id="tot-vendor" height="150"></canvas>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Invoice Generate</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i>
+                                                                </li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <p class="text-c-green f-w-500"><i
+                                                                class="feather icon-chevrons-up m-r-15"></i> 20% High
+                                                            than last month</p>
+                                                        <div class="row">
+                                                            <div class="col-4 b-r-default">
+                                                                <p class="text-muted m-b-5">Overall</p>
+                                                                <h5>68.52%</h5>
+                                                            </div>
+                                                            <div class="col-4 b-r-default">
+                                                                <p class="text-muted m-b-5">Monthly</p>
+                                                                <h5>28.90%</h5>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <p class="text-muted m-b-5">Day</p>
+                                                                <h5>13.50%</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <canvas id="invoice-gen" height="150"></canvas>
+                                                </div>
+                                            </div>
+                                            <!-- income end -->
+
+                                            <!-- ticket and update start -->
+                                            <div class="col-xl-6 col-md-12">
+                                                <div class="card table-card">
+                                                    <div class="card-header">
+                                                        <h5>Recent Tickets</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i>
+                                                                </li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                     <div class="card-block">
                                                         <div class="table-responsive">
-                                                            <table class="table table-hover  table-borderless">
+                                                            <table class="table table-hover table-borderless">
                                                                 <thead>
                                                                     <tr>
-                                                                        <th>
-                                                                            <div class="chk-option">
-                                                                                <div
-                                                                                    class="checkbox-fade fade-in-primary">
-                                                                                    <label class="form-label check-task">
-                                                                                        <input type="checkbox" value="">
-                                                                                        <span class="cr">
-                                                                                            <i class="cr-icon feather icon-check txt-default"></i>
-                                                                                        </span>
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            Application
-                                                                        </th>
-                                                                        <th>Sales</th>
-                                                                        <th>Change</th>
-                                                                        <th>Avg Price</th>
-                                                                        <th>Total</th>
+                                                                        <th>Status</th>
+                                                                        <th>Subject</th>
+                                                                        <th>Department</th>
+                                                                        <th>Date</th>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td>
-                                                                            <div class="chk-option">
-                                                                                <div
-                                                                                    class="checkbox-fade fade-in-primary">
-                                                                                    <label class="form-label check-task">
-                                                                                        <input type="checkbox" value="">
-                                                                                        <span class="cr">
-                                                                                            <i
-                                                                                                class="cr-icon feather icon-check txt-default"></i>
-                                                                                        </span>
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="d-inline-block align-middle">
-                                                                                <h6>Able Pro</h6>
-                                                                                <p class="text-muted m-b-0">Powerful
-                                                                                    Admin Theme</p>
-                                                                            </div>
+                                                                        <td><label
+                                                                                class="form-label label label-success">open</label>
                                                                         </td>
-                                                                        <td>16,300</td>
-                                                                        <td><canvas id="app-sale1" height="50"
-                                                                                width="100"></canvas></td>
-                                                                        <td>$53</td>
-                                                                        <td class="text-c-blue">$15,652</td>
+                                                                        <td>Website down for one week</td>
+                                                                        <td>Support</td>
+                                                                        <td>Today 2:00</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>
-                                                                            <div class="chk-option">
-                                                                                <div
-                                                                                    class="checkbox-fade fade-in-primary">
-                                                                                    <label class="form-label check-task">
-                                                                                        <input type="checkbox" value="">
-                                                                                        <span class="cr">
-                                                                                            <i
-                                                                                                class="cr-icon feather icon-check txt-default"></i>
-                                                                                        </span>
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="d-inline-block align-middle">
-                                                                                <h6>Photoshop</h6>
-                                                                                <p class="text-muted m-b-0">Design
-                                                                                    Software</p>
-                                                                            </div>
+                                                                        <td><label
+                                                                                class="form-label label label-primary">progress</label>
                                                                         </td>
-                                                                        <td>26,421</td>
-                                                                        <td><canvas id="app-sale2" height="50"
-                                                                                width="100"></canvas></td>
-                                                                        <td>$35</td>
-                                                                        <td class="text-c-blue">$18,785</td>
+                                                                        <td>Loosing control on server</td>
+                                                                        <td>Support</td>
+                                                                        <td>Yesterday</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>
-                                                                            <div class="chk-option">
-                                                                                <div
-                                                                                    class="checkbox-fade fade-in-primary">
-                                                                                    <label class="form-label check-task">
-                                                                                        <input type="checkbox" value="">
-                                                                                        <span class="cr">
-                                                                                            <i class="cr-icon feather icon-check txt-default"></i>
-                                                                                        </span>
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="d-inline-block align-middle">
-                                                                                <h6>Guruable</h6>
-                                                                                <p class="text-muted m-b-0">Best Admin
-                                                                                    Template</p>
-                                                                            </div>
+                                                                        <td><label
+                                                                                class="form-label label label-danger">closed</label>
                                                                         </td>
-                                                                        <td>8,265</td>
-                                                                        <td><canvas id="app-sale3" height="50"
-                                                                                width="100"></canvas></td>
-                                                                        <td>$98</td>
-                                                                        <td class="text-c-blue">$9,652</td>
+                                                                        <td>Authorizations keys</td>
+                                                                        <td>Support</td>
+                                                                        <td>27, Aug</td>
                                                                     </tr>
                                                                     <tr>
-                                                                        <td>
-                                                                            <div class="chk-option">
-                                                                                <div
-                                                                                    class="checkbox-fade fade-in-primary">
-                                                                                    <label class="form-label check-task">
-                                                                                        <input type="checkbox" value="">
-                                                                                        <span class="cr">
-                                                                                            <i class="cr-icon feather icon-check txt-default"></i>
-                                                                                        </span>
-                                                                                    </label>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="d-inline-block align-middle">
-                                                                                <h6>Flatable</h6>
-                                                                                <p class="text-muted m-b-0">Admin App
-                                                                                </p>
-                                                                            </div>
+                                                                        <td><label
+                                                                                class="form-label label label-success">open</label>
                                                                         </td>
-                                                                        <td>10,652</td>
-                                                                        <td><canvas id="app-sale4" height="50"
-                                                                                width="100"></canvas></td>
-                                                                        <td>$20</td>
-                                                                        <td class="text-c-blue">$7,856</td>
+                                                                        <td>Restoring default settings</td>
+                                                                        <td>Support</td>
+                                                                        <td>Today 9:00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><label
+                                                                                class="form-label label label-primary">progress</label>
+                                                                        </td>
+                                                                        <td>Loosing control on server</td>
+                                                                        <td>Support</td>
+                                                                        <td>Yesterday</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><label
+                                                                                class="form-label label label-success">open</label>
+                                                                        </td>
+                                                                        <td>Restoring default settings</td>
+                                                                        <td>Support</td>
+                                                                        <td>Today 9:00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><label
+                                                                                class="form-label label label-danger">closed</label>
+                                                                        </td>
+                                                                        <td>Authorizations keys</td>
+                                                                        <td>Support</td>
+                                                                        <td>27, Aug</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><label
+                                                                                class="form-label label label-success">open</label>
+                                                                        </td>
+                                                                        <td>Restoring default settings</td>
+                                                                        <td>Support</td>
+                                                                        <td>Today 9:00</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><label
+                                                                                class="form-label label label-primary">progress</label>
+                                                                        </td>
+                                                                        <td>Loosing control on server</td>
+                                                                        <td>Support</td>
+                                                                        <td>Yesterday</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
-                                                            <div class="text-center">
+                                                            <div class="text-end m-r-20">
                                                                 <a href="#!" class=" b-b-primary text-primary">View all
                                                                     Projects</a>
                                                             </div>
@@ -2029,94 +2117,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xl-4 col-md-12">
-                                                <div class="card user-activity-card">
-                                                    <div class="card-header">
-                                                        <h5>User Activity</h5>
-                                                    </div>
-                                                    <div class="card-block">
-                                                        <div class="row m-b-25">
-                                                            <div class="col-auto p-r-0">
-                                                                <div class="u-img">
-                                                                    <img src="/assets/images/breadcrumb-bg.jpg"
-                                                                        alt="user image" class="img-radius cover-img">
-                                                                    <img src="/assets/images/avatar-2.jpg"
-                                                                        alt="user image" class="img-radius profile-img">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <h6 class="m-b-5">John Deo</h6>
-                                                                <p class="text-muted m-b-0">Lorem Ipsum is simply dummy
-                                                                    text.</p>
-                                                                <p class="text-muted m-b-0"><i
-                                                                        class="feather icon-clock m-r-10"></i>2 min ago
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row m-b-25">
-                                                            <div class="col-auto p-r-0">
-                                                                <div class="u-img">
-                                                                    <img src="/assets/images/breadcrumb-bg.jpg"
-                                                                        alt="user image" class="img-radius cover-img">
-                                                                    <img src="/assets/images/avatar-2.jpg"
-                                                                        alt="user image" class="img-radius profile-img">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <h6 class="m-b-5">John Deo</h6>
-                                                                <p class="text-muted m-b-0">Lorem Ipsum is simply dummy
-                                                                    text.</p>
-                                                                <p class="text-muted m-b-0"><i
-                                                                        class="feather icon-clock m-r-10"></i>2 min ago
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row m-b-25">
-                                                            <div class="col-auto p-r-0">
-                                                                <div class="u-img">
-                                                                    <img src="/assets/images/breadcrumb-bg.jpg"
-                                                                        alt="user image" class="img-radius cover-img">
-                                                                    <img src="/assets/images/avatar-2.jpg"
-                                                                        alt="user image" class="img-radius profile-img">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <h6 class="m-b-5">John Deo</h6>
-                                                                <p class="text-muted m-b-0">Lorem Ipsum is simply dummy
-                                                                    text.</p>
-                                                                <p class="text-muted m-b-0"><i
-                                                                        class="feather icon-clock m-r-10"></i>2 min ago
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row m-b-5">
-                                                            <div class="col-auto p-r-0">
-                                                                <div class="u-img">
-                                                                    <img src="/assets/images/breadcrumb-bg.jpg"
-                                                                        alt="user image" class="img-radius cover-img">
-                                                                    <img src="/assets/images/avatar-2.jpg"
-                                                                        alt="user image" class="img-radius profile-img">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col">
-                                                                <h6 class="m-b-5">John Deo</h6>
-                                                                <p class="text-muted m-b-0">Lorem Ipsum is simply dummy
-                                                                    text.</p>
-                                                                <p class="text-muted m-b-0"><i
-                                                                        class="feather icon-clock m-r-10"></i>2 min ago
-                                                                </p>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="text-center">
-                                                            <a href="#!" class="b-b-primary text-primary">View all
-                                                                Projects</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- wather user -->
                                             <div class="col-xl-6 col-md-12">
                                                 <div class="card latest-update-card">
                                                     <div class="card-header">
@@ -2134,7 +2134,19 @@
                                                     </div>
                                                     <div class="card-block">
                                                         <div class="latest-update-box">
-                                                            <div class="row p-b-15">
+                                                            <div class="row p-t-20 p-b-30">
+                                                                <div class="col-auto text-end update-meta">
+                                                                    <p class="text-muted m-b-0 d-inline">2 hrs ago</p>
+                                                                    <i
+                                                                        class="feather icon-twitter bg-info update-icon"></i>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>+ 1652 Followers</h6>
+                                                                    <p class="text-muted m-b-0">You’re getting more and
+                                                                        more followers, keep it up!</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row p-b-30">
                                                                 <div class="col-auto text-end update-meta">
                                                                     <p class="text-muted m-b-0 d-inline">4 hrs ago</p>
                                                                     <i
@@ -2145,7 +2157,7 @@
                                                                     <p class="text-muted m-b-0">Congratulations!</p>
                                                                 </div>
                                                             </div>
-                                                            <div class="row p-b-15">
+                                                            <div class="row p-b-30">
                                                                 <div class="col-auto text-end update-meta">
                                                                     <p class="text-muted m-b-0 d-inline">1 day ago</p>
                                                                     <i
@@ -2165,29 +2177,39 @@
                                                                         class="feather icon-facebook bg-simple-c-green update-icon"></i>
                                                                 </div>
                                                                 <div class="col">
-                                                                    <h6>+1 Friend Requests</h6>
+                                                                    <h6>+2 Friend Requests</h6>
                                                                     <p class="text-muted m-b-10">This is great, keep it
                                                                         up!</p>
                                                                     <div class="table-responsive">
-                                                                        <table class="table table-hover m-b-0">
-                                                                            <tbody>
-                                                                                <tr>
-                                                                                    <td class="b-none">
-                                                                                        <a href="#!"
-                                                                                            class="align-middle">
-                                                                                            <img src="/assets/images/avatar-2.jpg"
-                                                                                                alt="user image"
-                                                                                                class="img-radius img-40 align-top m-r-15">
-                                                                                            <div class="d-inline-block">
-                                                                                                <h6>Jeny William</h6>
-                                                                                                <p
-                                                                                                    class="text-muted m-b-0">
-                                                                                                    Graphic Designer</p>
-                                                                                            </div>
-                                                                                        </a>
-                                                                                    </td>
-                                                                                </tr>
-                                                                            </tbody>
+                                                                        <table class="table table-hover">
+                                                                            <tr>
+                                                                                <td class="b-none">
+                                                                                    <a href="#!" class="align-middle">
+                                                                                        <img src="/assets/images/avatar-2.jpg"
+                                                                                            alt="user image"
+                                                                                            class="img-radius img-40 align-top m-r-15">
+                                                                                        <div class="d-inline-block">
+                                                                                            <h6>Jeny William</h6>
+                                                                                            <p class="text-muted m-b-0">
+                                                                                                Graphic Designer</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="b-none">
+                                                                                    <a href="#!" class="align-middle">
+                                                                                        <img src="/assets/images/avatar-1.jpg"
+                                                                                            alt="user image"
+                                                                                            class="img-radius img-40 align-top m-r-15">
+                                                                                        <div class="d-inline-block">
+                                                                                            <h6>John Deo</h6>
+                                                                                            <p class="text-muted m-b-0">
+                                                                                                Web Designer</p>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
                                                                         </table>
                                                                     </div>
                                                                 </div>
@@ -2200,138 +2222,152 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- ticket and update end -->
 
-                                            <div class="col-xl-6 col-md-12">
-                                                <div class="card user-card-full">
-                                                    <div class="row m-l-0 m-r-0">
-                                                        <div class="col-sm-4 bg-c-lite-green user-profile">
-                                                            <div class="card-block text-center text-white">
-                                                                <div class="m-b-25">
-                                                                    <img src="/assets/images/avatar-4.jpg"
-                                                                        class="img-radius" alt="User-Profile-Image">
-                                                                </div>
-                                                                <h6 class="f-w-600">Jeny William</h6>
-                                                                <p>Web Designer</p>
-                                                                <i class="feather icon-edit m-t-10 f-16"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-8">
-                                                            <div class="card-block">
-                                                                <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information
-                                                                </h6>
-                                                                <div class="row">
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Email</p>
-                                                                        <h6 class="text-muted f-w-400">jeny@gmail.com
-                                                                        </h6>
-                                                                    </div>
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Phone</p>
-                                                                        <h6 class="text-muted f-w-400">0023-333-526136
-                                                                        </h6>
-                                                                    </div>
-                                                                </div>
-                                                                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
-                                                                    Projects</h6>
-                                                                <div class="row">
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Recent</p>
-                                                                        <h6 class="text-muted f-w-400">Guruable Admin
-                                                                        </h6>
-                                                                    </div>
-                                                                    <div class="col-sm-6">
-                                                                        <p class="m-b-10 f-w-600">Most Viewed</p>
-                                                                        <h6 class="text-muted f-w-400">Able Pro Admin
-                                                                        </h6>
-                                                                    </div>
-                                                                </div>
-                                                                <ul class="social-link list-unstyled m-t-40 m-b-10">
-                                                                    <li><a href="#!" data-bs-toggle="tooltip"
-                                                                            data-bs-placement="bottom" title=""
-                                                                            data-original-title="facebook"><i
-                                                                                class="feather icon-facebook facebook"
-                                                                                aria-hidden="true"></i></a></li>
-                                                                    <li><a href="#!" data-bs-toggle="tooltip"
-                                                                            data-bs-placement="bottom" title=""
-                                                                            data-original-title="twitter"><i
-                                                                                class="feather icon-twitter twitter"
-                                                                                aria-hidden="true"></i></a></li>
-                                                                    <li><a href="#!" data-bs-toggle="tooltip"
-                                                                            data-bs-placement="bottom" title=""
-                                                                            data-original-title="instagram"><i
-                                                                                class="feather icon-instagram instagram"
-                                                                                aria-hidden="true"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
+                                            <!-- latest activity end -->
+                                            <div class="col-xl-8 col-md-12">
+                                                <div class="card latest-activity-card">
+                                                    <div class="card-header">
+                                                        <h5>Latest Activity</h5>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <!-- wather user -->
-
-                                            <!-- social download  start -->
-                                            <div class="col-xl-4 col-md-6">
-                                                <div class="card social-card bg-simple-c-blue">
                                                     <div class="card-block">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-auto">
-                                                                <i
-                                                                    class="feather icon-mail f-34 text-c-blue social-icon"></i>
+                                                        <div class="latest-update-box">
+                                                            <div class="row p-t-20 p-b-30">
+                                                                <div class="col-auto text-end update-meta">
+                                                                    <p class="text-muted m-b-0 d-inline">just now</p>
+                                                                    <i
+                                                                        class="feather icon-sunrise bg-simple-c-blue update-icon"></i>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>John Deo</h6>
+                                                                    <p class="text-muted m-b-15">The trip was an amazing
+                                                                        and a life changing experience!!</p>
+                                                                    <img src="/assets/images/mega-menu/01.jpg"
+                                                                        alt="" class="img-fluid img-100 m-r-15 m-b-10">
+                                                                    <img src="/assets/images/mega-menu/03.jpg"
+                                                                        alt="" class="img-fluid img-100 m-r-15 m-b-10">
+                                                                </div>
                                                             </div>
-                                                            <div class="col">
-                                                                <h6 class="m-b-0">Mail</h6>
-                                                                <p>231.2w downloads</p>
-                                                                <p class="m-b-0">Lorem Ipsum is simply dummy text of the
-                                                                    printing</p>
+                                                            <div class="row p-b-30">
+                                                                <div class="col-auto text-end update-meta">
+                                                                    <p class="text-muted m-b-0 d-inline">5 min ago</p>
+                                                                    <i
+                                                                        class="feather icon-file-text bg-simple-c-blue update-icon"></i>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>Administrator</h6>
+                                                                    <p class="text-muted m-b-0">Free courses for all our
+                                                                        customers at A1 Conference Room - 9:00 am
+                                                                        tomorrow!</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row p-b-30">
+                                                                <div class="col-auto text-end update-meta">
+                                                                    <p class="text-muted m-b-0 d-inline">3 hours ago</p>
+                                                                    <i
+                                                                        class="feather icon-map-pin bg-simple-c-blue update-icon"></i>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <h6>Jeny William</h6>
+                                                                    <p class="text-muted m-b-15">Happy Hour! Free drinks
+                                                                        at <span class="text-c-blue">Cafe-Bar all
+                                                                        </span>day long!</p>
+                                                                    <div id="markers-map"
+                                                                        style="height:200px;width:100%"></div>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <a href="#!" class="download-icon"><i
-                                                            class="feather icon-arrow-down"></i></a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-4 col-md-6">
-                                                <div class="card social-card bg-simple-c-pink">
-                                                    <div class="card-block">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-auto">
-                                                                <i
-                                                                    class="feather icon-twitter f-34 text-c-pink social-icon"></i>
-                                                            </div>
-                                                            <div class="col">
-                                                                <h6 class="m-b-0">twitter</h6>
-                                                                <p>231.2w downloads</p>
-                                                                <p class="m-b-0">Lorem Ipsum is simply dummy text of the
-                                                                    printing</p>
-                                                            </div>
+                                                        <div class="text-end">
+                                                            <a href="#!" class=" b-b-primary text-primary">View all
+                                                                Activity</a>
                                                         </div>
                                                     </div>
-                                                    <a href="#!" class="download-icon"><i
-                                                            class="feather icon-arrow-down"></i></a>
                                                 </div>
                                             </div>
                                             <div class="col-xl-4 col-md-12">
-                                                <div class="card social-card bg-simple-c-green">
+                                                <div class="card per-task-card">
+                                                    <div class="card-header">
+                                                        <h5>Your Tasks</h5>
+                                                    </div>
                                                     <div class="card-block">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-auto">
-                                                                <i
-                                                                    class="feather icon-instagram f-34 text-c-green social-icon"></i>
+                                                        <div class="row per-task-block text-center">
+                                                            <div class="col-6">
+                                                                <div data-label="45%"
+                                                                    class="radial-bar radial-bar-45 radial-bar-lg radial-bar-primary">
+                                                                </div>
+                                                                <h6 class="text-muted">Finished</h6>
+                                                                <p class="text-muted">642</p>
+                                                                <button
+                                                                    class="btn btn-primary btn-round btn-sm">Manage</button>
                                                             </div>
-                                                            <div class="col">
-                                                                <h6 class="m-b-0">Instagram</h6>
-                                                                <p>231.2w downloads</p>
-                                                                <p class="m-b-0">Lorem Ipsum is simply dummy text of the
-                                                                    printing</p>
+                                                            <div class="col-6">
+                                                                <div data-label="30%"
+                                                                    class="radial-bar radial-bar-30 radial-bar-lg radial-bar-primary">
+                                                                </div>
+                                                                <h6 class="text-muted">Remaining</h6>
+                                                                <p class="text-muted">495</p>
+                                                                <button
+                                                                    class="btn btn-primary btn-outline-primary btn-round btn-sm">Manage</button>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <a href="#!" class="download-icon"><i
-                                                            class="feather icon-arrow-down"></i></a>
-                                                </div>
-                                            </div>
-                                            <!-- social download  end -->
 
+                                                    </div>
+                                                </div>
+                                                <div class="card feed-card">
+                                                    <div class="card-header">
+                                                        <h5>Upcoming Deadlines</h5>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="fa fa fa-wrench open-card-option"></i>
+                                                                </li>
+                                                                <li><i class="fa fa-window-maximize full-card"></i></li>
+                                                                <li><i class="fa fa-minus minimize-card"></i></li>
+                                                                <li><i class="fa fa-refresh reload-card"></i></li>
+                                                                <li><i class="fa fa-trash close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row m-b-25">
+                                                            <div class="col-auto p-r-0">
+                                                                <img src="/assets/images/mega-menu/01.jpg"
+                                                                    alt="" class="img-fluid img-50">
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">New able - Redesign</h6>
+                                                                <p class="text-c-pink m-b-0">2 Days Remaining</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-25">
+                                                            <div class="col-auto p-r-0">
+                                                                <img src="/assets/images/mega-menu/02.jpg"
+                                                                    alt="" class="img-fluid img-50">
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">New Admin Dashboard</h6>
+                                                                <p class="text-c-pink m-b-0">Proposal in 6 Days</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row m-b-25">
+                                                            <div class="col-auto p-r-0">
+                                                                <img src="/assets/images/mega-menu/03.jpg"
+                                                                    alt="" class="img-fluid img-50">
+                                                            </div>
+                                                            <div class="col">
+                                                                <h6 class="m-b-5">Logo Design</h6>
+                                                                <p class="text-c-green m-b-0">10 Days Remaining</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="text-center">
+                                                            <a href="#!" class="b-b-primary text-primary">View all
+                                                                Feeds</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- latest activity end -->
                                         </div>
                                     </div>
                                 </div>
@@ -2400,19 +2436,27 @@
     <script type="text/javascript" src="/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
     <!-- modernizr js -->
     <script type="text/javascript" src="/bower_components/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
     <!-- Chart js -->
     <script type="text/javascript" src="/bower_components/chart.js/dist/Chart.js"></script>
-    <!-- amchart js -->
+    <!-- Google map js -->
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="/assets/pages/google-maps/gmaps.js"></script>
+    <!-- gauge js -->
+    <script src="/assets/pages/widget/gauge/gauge.min.js "></script>
     <script src="/assets/pages/widget/amchart/amcharts.js"></script>
     <script src="/assets/pages/widget/amchart/serial.js"></script>
+    <script src="/assets/pages/widget/amchart/gauge.js"></script>
+    <script src="/assets/pages/widget/amchart/pie.js"></script>
     <script src="/assets/pages/widget/amchart/light.js"></script>
-    <script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src="/assets/js/SmoothScroll.js"></script>
+    <!-- Custom js -->
     <script src="/assets/js/pcoded.min.js"></script>
-    <!-- custom js -->
     <script src="/assets/js/vartical-layout.min.js"></script>
-    <script type="text/javascript" src="/assets/pages/dashboard/custom-dashboard.js"></script>
-    <script type="text/javascript" src="/assets/js/script.min.js"></script>
+    <script src="/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="/assets/pages/dashboard/crm-dashboard.min.js"></script>
+    <script type="text/javascript" src="/assets/js/script.js"></script>
 </body>
 
 </html>
