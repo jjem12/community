@@ -21,7 +21,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', async ({ view }) => {
-  return view.render('welcome')
+  return view.render('index')
 })
 
 Route.get('/index', async ({ view }) => {
@@ -30,4 +30,13 @@ Route.get('/index', async ({ view }) => {
 
 Route.get('/dashboard-crm', async ({ view }) => {
   return view.render('dashboard_crm')
+})
+Route.get('/dashboard-analytics', async ({ view }) => {
+  return view.render('dashboard_analytics')
+})
+Route.get('/navbar-light', async ({ view }) => {
+  return view.render('navbar-light')
+})
+Route.get('/widget-statistic', async ({ view }) => {
+  return view.render('widget-statistic')
 })
